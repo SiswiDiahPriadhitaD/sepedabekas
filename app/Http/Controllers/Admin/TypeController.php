@@ -15,9 +15,9 @@ class TypeController extends Controller
      */
     public function index()
     {
-        $title = 'Type of Bycilce';
+        $title = 'Type of MotorCycle';
         $data = Type::withCount('product')
-                        ->get();
+            ->get();
         return view('admin.types.index', compact([
             'title', 'data'
         ]));
@@ -30,7 +30,7 @@ class TypeController extends Controller
      */
     public function create()
     {
-        $title = 'Type of Bycilce';
+        $title = 'Type of MotorCycle';
         return view('admin.types.create', compact([
             'title'
         ]));
@@ -55,7 +55,7 @@ class TypeController extends Controller
         ]);
 
         return redirect()->to('/admin/type')
-                    ->with('success', 'Data berhasil diubah');
+            ->with('success', 'Data berhasil diubah');
     }
 
     /**
@@ -66,9 +66,9 @@ class TypeController extends Controller
      */
     public function show($id)
     {
-        $title = 'Type of Bycilce';
+        $title = 'Type of MotorCycle';
         $data = Type::withCount('product')
-                    ->where('id', $id)->first();
+            ->where('id', $id)->first();
         return view('admin.types.show', compact([
             'title', 'data'
         ]));
@@ -82,9 +82,9 @@ class TypeController extends Controller
      */
     public function edit($id)
     {
-        $title = 'Type of Bycilce';
+        $title = 'Type of MotorCycle';
         $data = Type::withCount('product')
-                    ->where('id', $id)->first();
+            ->where('id', $id)->first();
         return view('admin.types.edit', compact([
             'title', 'data'
         ]));
@@ -110,7 +110,7 @@ class TypeController extends Controller
         ]);
 
         return redirect()->to('/admin/type')
-                    ->with('success', 'Data berhasil diubah');
+            ->with('success', 'Data berhasil diubah');
     }
 
     /**
@@ -123,6 +123,6 @@ class TypeController extends Controller
     {
         Type::where('id', $id)->delete();
         return redirect()->to('/admin/type')
-                    ->with('success', 'Data berhasil dihapus');
+            ->with('success', 'Data berhasil dihapus');
     }
 }
