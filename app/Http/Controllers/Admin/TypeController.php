@@ -15,7 +15,7 @@ class TypeController extends Controller
      */
     public function index()
     {
-        $title = 'Type of MotorCycle';
+        $title = 'Type of Car';
         $data = Type::withCount('product')
             ->get();
         return view('admin.types.index', compact([
@@ -30,7 +30,7 @@ class TypeController extends Controller
      */
     public function create()
     {
-        $title = 'Type of MotorCycle';
+        $title = 'Type of Car';
         return view('admin.types.create', compact([
             'title'
         ]));
@@ -66,7 +66,7 @@ class TypeController extends Controller
      */
     public function show($id)
     {
-        $title = 'Type of MotorCycle';
+        $title = 'Type of Car';
         $data = Type::withCount('product')
             ->where('id', $id)->first();
         return view('admin.types.show', compact([
@@ -82,7 +82,7 @@ class TypeController extends Controller
      */
     public function edit($id)
     {
-        $title = 'Type of MotorCycle';
+        $title = 'Type of Car';
         $data = Type::withCount('product')
             ->where('id', $id)->first();
         return view('admin.types.edit', compact([
