@@ -46,7 +46,7 @@
               <img src="{{ asset('storage/'.Auth::user()->photo) }}" class="rounded-circle" width="150" />
             @endif
             <h4 class="card-title mt-2">{{ Auth::user()->name }}</h4>
-            <h6 class="card-subtitle">Accounts {{ Auth::user()->role }} SeKas corp</h6>
+            <h6 class="card-subtitle">Akun {{ Auth::user()->role }} Sepeda Motor Bekas</h6>
             <div class="row text-center justify-content-md-center">
               <div class="col-4"><a href="javascript:void(0)" class="link"><i
                 class="mdi mdi-account-network"></i>

@@ -4,7 +4,7 @@
 <div class="page-breadcrumb">
   <div class="row">
     <div class="col-5 align-self-center">
-      <h4 class="page-title">Table {{ $title }}</h4>
+      <h4 class="page-title">Table type of motorcycle</h4>
     </div>
     <div class="col-7 align-self-center">
       <div class="d-flex align-items-center justify-content-end">
@@ -13,7 +13,7 @@
             <li class="breadcrumb-item">
               <a href="#">Home</a>
             </li>
-            <li class="breadcrumb-item active" aria-current="page">{{ $title }}</li>
+            <li class="breadcrumb-item active" aria-current="page">type of motorcycle</li>
           </ol>
         </nav>
       </div>
@@ -38,13 +38,13 @@
     <div class="col-12">
       <div class="card">
         <div class="card-body">
-          <h4 class="card-title">{{ $title }}</h4>
+          {{-- <h4 class="card-title">{{ $title }}</h4> --}}
           
           <a href="/admin/type/create" class="btn btn-md btn-info text-white float-end">Tambah Data</a>
 
-          <h6 class="card-subtitle float-start">Add <code>.table-hover</code> to enable a hover state on table
+          {{-- <h6 class="card-subtitle float-start">Add <code>.table-hover</code> to enable a hover state on table
             rows within a <code>&lt;tbody&gt;</code>.
-          </h6>
+          </h6> --}}
         </div>
 
         <div class="table-responsive">

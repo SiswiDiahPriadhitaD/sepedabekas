@@ -9,7 +9,7 @@
     <meta name="description"
       content="Nice Admin Lite is powerful and clean admin dashboard template, inpired from Bootstrap Framework">
     <meta name="robots" content="noindex,nofollow">
-    <title>SeKas Application - 2022</title>
+    <title>sepeda motor bekas</title>
     <link rel="canonical" href="https://www.wrappixel.com/templates/niceadmin-lite/" />
     <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('assets/images/favicon.png') }}">
     <link href="{{ asset('assets/libs/chartist/dist/chartist.min.css') }}" rel="stylesheet">
