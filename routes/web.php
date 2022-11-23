@@ -37,13 +37,26 @@ Auth::routes();
 
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
+Route::middleware(['auth'])->group(function () {
+    Route::controller(CustomerHomeController::class)->group(function () {
+        Route::get('profile', 'profile');
+        Route::put('update_profile', 'update_profile');
+        Route::put('update_password', 'update_password');
+    });
+
+    Route::controller(CustomerTransactionController::class)->group(function () {
+        Route::get('transaction', 'index');
+        Route::post('transaction', 'store');
+        Route::get('transaction/{id}/show', 'show');
+    });
+});
 
 Route::middleware(['auth', 'isAdmin'])->group(function () {
     Route::prefix('admin')->group(function () {
         Route::controller(AdminHomeController::class)->group(function () {
             Route::get('home', 'index');
             Route::put('update_profile', 'update_profile');
-            Route::get('change_password', 'change_password');
+            // Route::get('change_password', 'change_password');
             Route::put('update_password', 'update_password');
         });
 
