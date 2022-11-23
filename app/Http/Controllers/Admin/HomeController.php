@@ -11,15 +11,17 @@ use Illuminate\Support\Facades\Storage;
 
 class HomeController extends Controller
 {
-    public function index(){
-    //    dd('ok');
+    public function index()
+    {
+        // dd('ok');
         $title = 'Dashboard';
         return view('admin.home.index', compact([
             'title'
         ]));
     }
 
-    public function update_profile(Request $request){
+    public function update_profile(Request $request)
+    {
         // ddd($request->all());
         $request->validate([
             'name' => 'required|string|max:50',
@@ -29,11 +31,11 @@ class HomeController extends Controller
         ]);
 
         $image_name = null;
-        if(auth()->user()->photo && file_exists(storage_path('app/public/'. auth()->user()->photo))){
+        if (auth()->user()->photo && file_exists(storage_path('app/public/' . auth()->user()->photo))) {
             Storage::delete(['public/', auth()->user()->photo]);
         }
-        
-        if($request->photo != null){
+
+        if ($request->photo != null) {
             $image_name = $request->file('photo')->store('img-profile', 'public');
         }
 
@@ -46,24 +48,26 @@ class HomeController extends Controller
             ]);
 
         return redirect()->back()
-                         ->with('success', 'Profile successfully changed at '. Carbon::now());
+            ->with('success', 'Profile successfully changed at ' . Carbon::now());
     }
 
-    public function change_password(){
+    public function change_password()
+    {
         $title = 'Change Password';
         return view('admin.home.change_password', compact('title'));
     }
 
-    public function update_password(Request $request){
+    public function update_password(Request $request)
+    {
         $request->validate([
             'password' => 'required|min:6',
             'password_confirmation' => 'same:password|min:6'
         ]);
-        
+
         User::where('id', auth()->user()->id)->update([
             'password' => Hash::make($request->password)
         ]);
-        
-        return redirect('/admin/home')->with('success', 'Password successfully changed at '.Carbon::now());
+
+        return redirect('/admin/home')->with('success', 'Password successfully changed at ' . Carbon::now());
     }
 }
