@@ -6,7 +6,7 @@
   <div class="row">
     <div class="col-md-4 mb-3">
       <div class="card w-100 radius-8 shadow-sm border-0" style="overflow: hidden">
-        <img src="{{ asset('ui/images/mio.png') }}" class="card-img-top h-50" alt="...">
+        <img src="{{ asset('D:\tubes\sepedabekas\public\assets\images\sepeda\mio.jpg') }}" class="card-img-top h-50" alt="...">
         <div class="card-body">
           <h5 class="card-title">Mio 2022</h5>
           <p class="text-grey-light top-5 fs-10">Detail - {{ 'Honda' }} - {{ 'Honda 2022' }}</p>

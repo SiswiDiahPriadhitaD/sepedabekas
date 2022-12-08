@@ -39,7 +39,7 @@
 
         <div class="modal-body">
           <p class="text-center">Apakah anda yakin akan membeli sepeda motor{{ $data->name }}?</p>
-          <input type="hidden" name="user_id" class="form-control" value="{{ Auth::user()->id }}">
+          <input type="hidden" name="user_id" class="form-control" value="{{ $data->id!=1 }}">
           <input type="hidden" name="product_id" class="form-control" value="{{ $data->id }}">
           <input type="hidden" name="total" class="form-control" value="{{ $data->price }}">
           <label for="information">Informasi Tambahan : </label>

@@ -13,7 +13,7 @@
             <p class="text-grey-light top-5 fs-10">Detail - {{ $item->brand->brand }} - {{ $item->type->type }}</p>
             <p class="card-text fs-11 top-5">{{ substr($item->description, 0,100) }}..</p>
             <h5 class="float-start mt-2 text-dark fw-bold">Rp. {{ number_format($item->price) }}</h5>
-            <a href="/product/{{ $item->id }}/show" class="btn btn-secondary btn-sm float-end px-5 py-2">Buy Now</a>
+            <a href="/product/{{ $item->id }}/show" class="btn btn-secondary btn-sm float-end px-5 py-2">Book Now</a>
           </div>
         </div>
       </div>
